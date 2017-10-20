@@ -12,7 +12,7 @@ var config = {
   authDomain: "push-example-f01c5.firebaseapp.com",
   databaseURL: "https://push-example-f01c5.firebaseio.com",
   storageBucket: "push-example-f01c5.appspot.com",
-  messagingSenderId: "82818122160"
+  messagingSenderId: "1098514015680"
 };
 firebase.initializeApp(config);
 

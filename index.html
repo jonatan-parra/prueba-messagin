@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>UWallet</title>
+
+	<link href='public/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+	<link href='public/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	<link href='public/css/menu_navegacion.css' rel='stylesheet' type='text/css'>
+	<link href='public/css/style.css' rel='stylesheet' type='text/css'>
+	<link href='public/css/landing_page.css' rel='stylesheet' type='text/css'>
+	<link href='public/css/ionicons.css' rel='stylesheet' type='text/css'>
+	<link href='public/css/toastr.min.css' rel='stylesheet'>
+	<link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+
+
+
+
+
+	<div id="div_menu_navegacion"></div>
+
+	<div id="div_registrar_usuario"></div>
+
+	<div class="container">
+
+	<div class="" id="div_transaccion"></div>
+
+
+
+	<div id="div_login"></div>
+
+	<div id="div_menu_inicio"></div>
+
+	<div id="div_menu_notificaciones"></div>
+
+	<div id="div_menu_lista_pagos"></div>
+
+	<div id="div_menu_extractos"></div>
+
+	<div id="div_menu_mi_perfil"></div>
+
+
+
+</div> <!-- Fin del div container-->
+
+<!-- Template menu de navegación -->
+<script type="text/template" id="tpl_login_register">
+	<!-- HEADER-->
+ <header id="header">
+			<div class="container" >
+							<div class="row"  >
+									 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 logo-wrapper">
+											 <img src="public/img/logo_uwallet.png" alt="" />
+									 </div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right" >
+												<div class="menu-links scroll-me">
+														<a href="#header"> <i class="ion-ios-home-outline"></i> </a>
+												<a href="#about"> <i class="ion-ios-camera-outline"></i> </a>
+												<a href="#clients"> <i class="ion-ios-grid-view-outline"></i> </a>
+												<a href="#contact"> <i class="ion-ios-chatboxes-outline"></i> </a>
+												</div>
+							</div>
+							</div>
+					</div>
+ </header>
+	<!-- HEADER SECTION END-->
+	<!--HOME SECTION START  -->
+	<div id="home">
+			<div class="overlay">
+					<div class="container">
+							<div class="row scroll-me" >
+								 <div class="col-md-6 col-sm-6 col-xs-12">
+									 <h1 >UWallet</h1>
+									 <h4>UWallet es una billetera virtual que agilizará tus transacciones.
+									     Ya no necesitarás llevar efectivo con tigo, podrás realizar pagos desde tu celular o desde la página web.
+											 También podrás generar extractos, añadir recordatorios de pago y añadir dinero desde tu tarjeta débito/crédito.
+										</h4>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+
+
+
+								<h1>Inicia sesión</h1>
+								<form role="form" id="form_userlogin">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="input_email"> Email </label>
+												<input class="form-control" name="email" id="input_email" type="email" placeholder="Email" required  />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="input_password">	Contraseña </label>
+												<input class="form-control" name="password" id="input_password" type="password" placeholder="Contraseña" required  />
+											</div>
+										</div>
+									</div>
+									<input type="submit" class="btn btn-default" value="Iniciar sesión" form="form_userlogin" />
+									<br><br>
+									<div class="alert alert-danger" id="form_userlogin_error" style="display:none"></div>
+								</form>
+
+
+
+								<h1>Registrate</h1>
+								<form role="form" id="form_userreg">
+									<div class="row">
+										<div class="col-md-8">
+											<div class="form-group">
+												<label for="input_email"> Email </label>
+												<input class="form-control" name="email" id="input_email" type="email" placeholder="Email" required />
+											</div>
+										</div>
+										<div class="col-md-4"></div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="input_nombre"> Nombres </label>
+												<input class="form-control" name="firstName" id="input_nombre" type="text" placeholder="Nombre" required />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="input"> Apellidos </label>
+												<input class="form-control" name="lastName" id="input_apellido" type="text" placeholder="Apellido" required />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="input_password">	Contraseña </label>
+												<input class="form-control" name="password" id="input_password" type="password" placeholder="Contraseña" required  />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="input_confirmation">	Confirmar contraseña </label>
+												<input class="form-control" name="password_confirmation" id="input_confirmation" type="password" placeholder="Confirmación de contraseña" required />
+											</div>
+										</div>
+										</div>
+										<input type="submit" class="btn btn-default" value="Registrar" form="form_userreg" />
+										<br><br>
+										<div class="alert alert-danger" id="form_userreg_error" style="display:none"></div>
+										</form>
+
+									</div>
+							</div>
+
+
+					</div>
+			</div>
+
+	</div>
+	<!--HOME SECTION END  -->
+<!-- ABOUT SECTION START-->
+<section id="about">
+	 <div class="container">
+			 <div class="row">
+					 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							 <h2 class="head-line">CARACTERÍSTICAS GENERALES</h2>
+							 <div class="row text-center">
+					 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							 <div class="row pad-bottom">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+												<div class="icon-wrapper">
+														 <i class="ion-tshirt-outline"></i>
+												</div>
+							 <h4>Compras </h4>
+																	 Realiza tus compras facilmente desde la aplicación.
+
+					 </div>
+					 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							 <div class="icon-wrapper">
+							 <i class="ion-monitor"></i>
+									 </div>
+							 <h4>Página Web  </h4>
+																 Realiza tus transacciones desde cualquiere explorador .
+
+					 </div>
+					 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							 <div class="icon-wrapper">
+							 <i class="ion-clipboard"></i>
+									 </div>
+							 <h4>Extractos</h4>
+							 Supervisa tus movimientos bancarios generando extractos.
+					 </div>
+									 </div>
+
+			 </div>
+
+	 </div>
+
+					 </div>
+
+					 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center" >
+							 <img src="public/img/phone.png" class="img-side" alt="" />
+					 </div>
+			 </div>
+	 </div>
+</section>
+
+<!-- CLIENTS SECTION END-->
+
+<!-- CONTACT SECTION START-->
+<section id="contact">
+	 <div class="overlay">
+	 <div class="container">
+			 <div class="row text-center">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  contact-cover" >
+								<h2>Ubicación</h2>
+								<h3>26, Bogotá</h3>
+								<h3>Colombia</h3>
+								<div class="space"> </div>
+								 <div class="social">
+									 <a href="#"><i class="fa fa-facebook "></i></a>
+									 <a href="#"><i class="fa fa-twitter"></i></a>
+									 <a href="#"><i class="fa fa-google-plus "></i></a>
+
+									 <a href="#"><i class="fa fa-linkedin "></i></a>
+							 </div>
+					 </div>
+			 </div>
+
+	 </div>
+				</div>
+</section>
+<!-- CONATCT SECTION END-->
+
+
+</script>
+
+
+
+<!-- Inicio de modal generico. -->
+<div class="modal fade" id="modal_generico" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+       <h4 class="modal-title text-center" id="modal_generico_header"> </h4>
+     </div>
+
+     <div class="modal-body" id="modal_generico_body"></div>
+
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">Listo</button>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- Fin modal de  modal generico .-->
+
+	<!-- ========= -->
+	<!-- Librerias -->
+	<!-- ========= -->
+	<!-- <script src = "public/js/vendor/utils.js"></script> -->
+	<script src = "public/js/vendor/jquery-3.2.1.min.js" type = "text/javascript"></script>
+	<script src = "public/js/vendor/underscore-min.js" type = "text/javascript"></script>
+	<script src = "public/js/vendor/backbone-min.js" type = "text/javascript"></script>
+	<script src = "public/js/vendor/bootstrap.min.js" type = "text/javascript"></script>
+	<script src = "public/js/vendor/toastr.min.js" type = "text/javascript"></script>
+	<!-- <script src = "public/js/vendor/firebase.js" type = "text/javascript"></script> -->
+	<!-- <script src = "public/js/vendor/firebase-app.js" type = "text/javascript"></script> -->
+	<!-- <script src = "public/js/vendor/firebase-messaging.js" type = "text/javascript"></script> -->
+
+<!--	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js" type="text/javascript"></script> -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-messaging.js" type="text/javascript"></script> -->
+	<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+	<script src = "firebase-messaging-sw.js" type = "text/javascript"></script>
+
+	<script src = "public/js/vendor/firebase-init.js" type = "text/javascript"></script>
+
+
+	<script src="public/js/vendor/menu_navegacion.js" type="text/javascript">	</script>
+	<script src="public/js/vendor/funciones_auxiliares.js" type="text/javascript">	</script>
+	<script src="public/js/vendor/backbonefire.min.js" type="text/javascript">	</script>
+	<script src="public/js/vendor/custom.js" type="text/javascript">	</script>
+
+
+	<!-- ========================-->
+	<!-- Logica de la aplicacion -->
+	<!-- ========================-->
+	<script src="public/js/uwallet/views/menuNavegacion_view.js"></script>
+	<script src="public/js/uwallet/views/menuInicio_view.js"></script>
+
+
+
+
+  <!-- ===========================================-->
+	<!--La idea es tener un vista por cada servicio -->
+	<!-- ===========================================-->
+
+	<!-- Servicio login -->
+	<script src="public/js/uwallet/models/userReg_model.js"></script>
+	<script src="public/js/uwallet/collections/userRegs_collection.js"></script>
+	<!-- <script src="public/js/uwallet/views/userReg_view.js"></script> -->
+
+	<script src="public/js/uwallet/models/userLogin_model.js"></script>
+	<script src="public/js/uwallet/collections/userLogin_collection.js"></script>
+	<script src="public/js/uwallet/views/userLogin_view.js"></script>
+
+	<script src="public/js/uwallet/models/userVerify_model.js"></script>
+
+	<!-- Servicio de transacciones -->
+	<script src="public/js/uwallet/models/transaction_model.js"></script>
+	<script src="public/js/uwallet/collections/transaction_collection.js"></script>
+
+	<!--<script src="public/js/uwallet/models/transactionById_model.js"></script>
+	<script src="public/js/uwallet/collections/transactionById_collection.js"></script>
+
+	<script src="public/js/uwallet/models/transactionByUser_model.js"></script>
+	<script src="public/js/uwallet/collections/transactionByUser_collection.js"></script>
+
+	<script src="public/js/uwallet/views/transaction_view.js"></script>-->
+
+	<!-- Servicio de notificaciones -->
+	<script src="public/js/uwallet/models/notification_model.js"></script>
+	<script src="public/js/uwallet/collections/notifications_collection.js"></script>
+	<script src="public/js/uwallet/views/notificaciones_view.js"></script>
+
+	<!-- Servicio de lista de pagos -->
+	<script src="public/js/uwallet/models/list_model.js"></script>
+	<script src="public/js/uwallet/models/list_create_model.js"></script>
+	<script src="public/js/uwallet/models/list_delete_model.js"></script>
+	<script src="public/js/uwallet/collections/lists_collection.js"></script>
+	<script src="public/js/uwallet/views/listaPagos_view.js"></script>
+
+	<!-- Servicio de extractos -->
+	<script src="public/js/uwallet/models/extracto_model.js"></script>
+	<script src="public/js/uwallet/models/extracto_all_model.js"></script>
+
+	<!-- Mi perfil -->
+	<script src="public/js/uwallet/models/profile_model.js"></script>
+	<script src="public/js/uwallet/models/cards_model.js"></script>
+	<script src="public/js/uwallet/models/cards_create_model.js"></script>
+	<script src="public/js/uwallet/models/cards_load_model.js"></script>
+	<script src="public/js/uwallet/views/miPerfil_view.js"></script>
+
+	<script type="text/javascript">
+	$(function() {
+		if (sessionStorage.getItem("token") != null) {
+			console.log("Esta logueado");
+
+			//var userreg_view = new app.Userreg_view();
+		//	var userLogin_view = new app.UserLogin_view();
+			userLogin_view.loguear(sessionStorage.getItem("token"));
+		} else {
+
+		}
+	})
+
+	</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -->
